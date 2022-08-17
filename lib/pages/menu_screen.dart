@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_menu_online/data/restaurantData.dart';
-import 'package:food_menu_online/widgets/menuScreenAppBar.dart';
-import 'package:food_menu_online/widgets/menuScreenBodyWid.dart';
+import 'package:food_menu_online/widgets/menu_screen_app_bar.dart';
+import 'package:food_menu_online/widgets/menu_screen_body_wid.dart';
 
 import '../widgets/menu_items.dart';
 
@@ -32,7 +32,7 @@ class _MenuScreenState extends State<MenuScreen> with TickerProviderStateMixin {
       // ),
       body: NestedScrollView(
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
-                menuAppBar('restaurant'),
+                MenuAppBar('restaurant'),
                 getBody(),
                 menuTabBar(_tabController),
               ],

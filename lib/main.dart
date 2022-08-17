@@ -3,10 +3,12 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:food_menu_online/pages/loginPage.dart';
+import 'package:food_menu_online/pages/business_owner_form.dart';
+import 'package:food_menu_online/pages/menu_details.dart';
 import 'package:food_menu_online/pages/menu_screen.dart';
-import 'package:food_menu_online/pages/onBoardPage.dart';
+import 'package:food_menu_online/pages/on_board_page.dart';
 import 'package:food_menu_online/pages/root_app.dart';
+import 'package:get/get.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,17 +29,27 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
-  
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FoodburmaApp(),
+      // home: FoodburmaApp(),
+      initialRoute: "/",
+      getPages: [
+        GetPage(name: "/", page: () => FoodburmaApp()),
+        GetPage(name: "/menu", page: () => MenuScreen()),
+        GetPage(name: "/menu/menu_detail", page: () => MenuDetailsPage()),
+        GetPage(name: "/business_owner_form", page: () => BusinessOwnerForm()),
+      ],
+      // onUnknownRoute: (RouteSettings settings) {
+      //   return MaterialPageRoute<void>(
+      //     settings: settings,
+      //     builder: (_) => UnKnownPage(),
+      //   );
+      // },
+      // unknownRoute: GetPage(name: "/notFound", page: ()=>UnKnownPage()),
     );
   }
-
-  
 }
 
 class FoodburmaApp extends StatefulWidget {
@@ -61,7 +73,6 @@ class _FoodburmaAppState extends State<FoodburmaApp> {
   }
 
   void openMenuScreen() {
-    Navigator.push(context,MaterialPageRoute(builder: (e) => MenuScreen()));
+    Get.toNamed("/business_owner_form");
   }
 }
-

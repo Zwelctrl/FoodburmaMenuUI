@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:food_menu_online/data/restaurantData.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
-class menuAppBar extends StatefulWidget {
+class MenuAppBar extends StatefulWidget {
   final String IMG;
-  menuAppBar(this.IMG, {Key? key}) : super(key: key);
+  MenuAppBar(this.IMG, {Key? key}) : super(key: key);
 
   @override
-  State<menuAppBar> createState() => _menuAppBarState();
+  State<MenuAppBar> createState() => _MenuAppBarState();
 }
 
-class _menuAppBarState extends State<menuAppBar> {
+class _MenuAppBarState extends State<MenuAppBar> {
   bool bookMarkTrig = true;
   @override
   Widget build(BuildContext context) {
@@ -28,14 +29,7 @@ class _menuAppBarState extends State<menuAppBar> {
           preferredSize: Size.fromHeight(20)),
       backgroundColor: Colors.orange,
       elevation: 0,
-      leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          )),
+     
       actions: [
         IconButton(
           onPressed: () {

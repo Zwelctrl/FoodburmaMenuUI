@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_menu_online/data/restaurantData.dart';
-import 'package:food_menu_online/widgets/menu_items.dart';
+
 
 Widget getBody() {
   return SliverToBoxAdapter(

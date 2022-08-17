@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
+import 'package:food_menu_online/data/restaurantData.dart';
 
-class menu_details_info extends StatelessWidget {
-  const menu_details_info({Key? key}) : super(key: key);
+class Menu_Details_Info extends StatelessWidget {
+  const Menu_Details_Info({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +21,8 @@ class menu_details_info extends StatelessWidget {
                   "မာလာ မောက်ချိုက် ",
                   style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 25),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20),
                 ),
               ],
             ),
@@ -30,30 +32,18 @@ class menu_details_info extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("စျေးနှုန်း -",
+                Text("စျေးနှုန်း - ၁၃၅၀၀",
                     style: TextStyle(
                         color: Colors.black.withOpacity(.9),
-                        fontWeight: FontWeight.w100,
-                        fontSize: 19)),
-                Text("၁၃၅၀၀",
-                    style: TextStyle(
-                        color: Colors.black.withOpacity(.9),
-                        fontWeight: FontWeight.w100,
-                        fontSize: 19))
+                        fontWeight: FontWeight.w300,
+                        fontSize: 17)),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: SizedBox(
-              child: Text(
-                """
-ချွမ်း​ဝေဝမ် မာလာ​မောက်ချိုက်အနှစ်ကို အရိုးပြုတ်ရည် (ဒါမှမဟုတ်) ​ရိုးရိုးရေထဲ ချိန်ဆ ထည့်ပြီး တည်ပါ။ 
-ပွက်ပွက်ဆူ လာပြီ ဆိုရင်​တော့ ကိုယ်ကြိုက်နှစ်သက်ရာ အသား၊ အရွက်​တွေ ထည့်ပြုတ်လို့ ရပါပြီ​​။ 
-ပါဝင် ပစ္စည်း​တွေ အကုန်ကျက်ပြီဆိုရင်​တော့ ​ပူပူ​နွေး​နွေး အဝ ​​လွေးလို့ ရပါပြီ​နော်။ 
-Wow....လွယ်လွယ်​လေးပဲ​နော်။ ဟင်းချက် ပျင်းတဲ့ မာလာချစ်သူတို့အတွက်လည်း အို​ကေစိုပြည်​ပေါ့။""",
-                textAlign: TextAlign.start,
-              ),
+              child: Html(data: htmlData),
             ),
           ),
         ],
