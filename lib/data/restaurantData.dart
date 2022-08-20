@@ -55,7 +55,7 @@ List itemNames = [
 ];
 
 const htmlData = r"""
-<p style='color: black; text-align: start;display: block;'>
+<p style='color: black; text-align: start;display: block;line-height: 18cm;'>
 
 ချွမ်း​ဝေဝမ် မာလာ​မောက်ချိုက်အနှစ်ကို အရိုးပြုတ်ရည် (ဒါမှမဟုတ်) ​ရိုးရိုးရေထဲ ချိန်ဆ ထည့်ပြီး တည်ပါ။ 
 ပွက်ပွက်ဆူ လာပြီ ဆိုရင်​တော့ ကိုယ်ကြိုက်နှစ်သက်ရာ အသား၊ အရွက်​တွေ ထည့်ပြုတ်လို့ ရပါပြီ​​။ 

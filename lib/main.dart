@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // home: FoodburmaApp(),
-      initialRoute: "/",
+      initialRoute: "/business_owner_form",
       getPages: [
         GetPage(name: "/", page: () => FoodburmaApp()),
         GetPage(name: "/menu", page: () => MenuScreen()),
@@ -73,6 +73,6 @@ class _FoodburmaAppState extends State<FoodburmaApp> {
   }
 
   void openMenuScreen() {
-    Get.toNamed("/business_owner_form");
+    Get.toNamed("/menu");
   }
 }

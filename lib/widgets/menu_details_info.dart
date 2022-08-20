@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:food_menu_online/data/restaurantData.dart';
+import 'package:food_menu_online/widgets/big_text.dart';
 
 class Menu_Details_Info extends StatelessWidget {
   const Menu_Details_Info({Key? key}) : super(key: key);
@@ -17,13 +18,7 @@ class Menu_Details_Info extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(
-                  "မာလာ မောက်ချိုက် ",
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 20),
-                ),
+                BigText(text: "မာလာ မောက်ချိုက် ", color: Colors.black, size: 30, fontWeight: FontWeight.bold)
               ],
             ),
           ),
@@ -41,7 +36,7 @@ class Menu_Details_Info extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: SizedBox(
               child: Html(data: htmlData),
             ),

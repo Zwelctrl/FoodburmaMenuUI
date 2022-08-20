@@ -32,18 +32,18 @@ Widget menuTabBar(tabController) {
 
 Widget menuTabBarView(tabcontroller) {
   return Padding(
-    padding: const EdgeInsets.only(top: 7 ),
+    padding: const EdgeInsets.only(top: 7),
     child: TabBarView(controller: tabcontroller, children: [
       MenuListItem(
         "biryani",
         "ကြက်သားဒံပေါက်",
-        "အနံ့မွှေးအောင်ချက်ထားပါတယ်",
+        "တစ်ပွဲ ၆၅၀၀",
       ),
-      MenuListItem("maocai", "မောက်ချိုက်", "မာလာမောက်ချိုက်ဖြစ်ပါတယ်"),
-      MenuListItem("dumpling", "ဖက်ထုပ်", "ကြက်သား၊ ၀က်သား ရပါတယ်"),
+      MenuListItem("maocai", "မောက်ချိုက်", "တစ်ပွဲ ၃၅၀၀"),
+      MenuListItem("dumpling", "ဖက်ထုပ်", "တစ်ပွဲ ၂၅၀၀"),
       MenuListItem("breakfast", "အနောက်တိုင်း မနက်စာ", "တစ်ပွဲ ၃၀၀၀"),
-      MenuListItem("sushi", "Sushi", "ပင်လယ်စာ အစုံ"),
-      MenuListItem('bubbletea', 'Tealeaves boba', 'Calories Free')
+      MenuListItem("sushi", "Sushi", "တစ်ပွဲ ၆၅၀၀"),
+      MenuListItem('bubbletea', 'Tealeaves boba', 'တစ်ပွဲ ၁၉၀၀၀')
     ]),
   );
 }

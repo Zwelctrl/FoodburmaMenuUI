@@ -57,7 +57,7 @@ class MenuListItem extends StatelessWidget {
                     MenuDescription,
                     maxLines: 2,
                     style: TextStyle(
-                        color: Colors.black.withOpacity(.4),
+                        color: Colors.black.withOpacity(.7),
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
                         overflow: TextOverflow.fade),
