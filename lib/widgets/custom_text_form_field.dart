@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-Widget textformfield(String textToUse, {TextInputType? type}) {
+Widget textformfield(String textToUse, {TextInputType? type, int? maxlines}) {
   return TextFormField(
+    maxLines: maxlines,
     keyboardType: type,
     decoration: InputDecoration(
       isDense: true,

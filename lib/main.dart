@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_menu_online/pages/business_owner_form.dart';
+import 'package:food_menu_online/pages/menu_app.dart';
 import 'package:food_menu_online/pages/menu_details.dart';
 import 'package:food_menu_online/pages/menu_screen.dart';
 import 'package:food_menu_online/pages/on_board_page.dart';
@@ -34,12 +35,13 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,  
       // home: FoodburmaApp(),
-      initialRoute: "/business_owner_form",
+      initialRoute: "/menu_app",
       getPages: [
         GetPage(name: "/", page: () => FoodburmaApp()),
         GetPage(name: "/menu", page: () => MenuScreen()),
         GetPage(name: "/menu/menu_detail", page: () => MenuDetailsPage()),
         GetPage(name: "/business_owner_form", page: () => BusinessOwnerForm()),
+        GetPage(name: "/menu_app", page: () => MenuApp()),
       ],
       // onUnknownRoute: (RouteSettings settings) {
       //   return MaterialPageRoute<void>(
